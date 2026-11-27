@@ -22,7 +22,7 @@ def calculate_total(items):
         qty = item.get("qty", 0)
         if not isinstance(qty, int) or qty <= 0:
             raise ValueError("Invalid quantity")
-        total += prices[item["id"]] + qty
+        total += prices[item["id"]] * qty
     return round(total, 2)
 
 
